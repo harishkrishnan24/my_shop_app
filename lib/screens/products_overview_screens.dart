@@ -7,6 +7,8 @@ import '../widgets/badge.dart';
 import '../providers/products.dart';
 import '../providers/cart.dart';
 
+import './cart_screen.dart';
+
 enum FilterOptions { Favorites, All }
 
 class ProductsOverviwScreen extends StatefulWidget {
@@ -53,7 +55,9 @@ class _ProductsOverviwScreenState extends State<ProductsOverviwScreen> {
               value: cart.itemCount.toString(),
             ),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(CartScreen.routeName);
+              },
               icon: Icon(
                 Icons.shopping_cart,
               ),
