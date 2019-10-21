@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../widgets/products_grid.dart';
 import '../widgets/badge.dart';
+import '../widgets/app_drawer.dart';
 
 import '../providers/products.dart';
 import '../providers/cart.dart';
@@ -65,6 +66,7 @@ class _ProductsOverviwScreenState extends State<ProductsOverviwScreen> {
           ),
         ],
       ),
+      drawer: AppDrawer(),
       body: ProductsGrid(_showOnlyFavorites),
     );
   }
